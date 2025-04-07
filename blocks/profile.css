@@ -2,8 +2,8 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
-  height: 210px;
-  width: 1280px;
+  min-height: 210px;
+  max-width: 1280px;
 }
 
 .profile__avatar {
@@ -29,4 +29,35 @@
 }
 .profile__add {
   margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    height: 80px;
+    width: 80px;
+    margin: 0 0 12px;
+
+  }
+
+  .profile__edit {
+    margin: 32px 0 20px;
+  }
+
+  .profile__add {
+    margin: 0 0 20px;
+  }
+
+  .profile__description {
+    margin: 0 32px;
+  }
 }
