@@ -26,11 +26,11 @@
 .profile__description {
   margin: 0;
   text-overflow: ellipsis;
-overflow: hidden;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-max-width: 97px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 97px;
 }
 
 .profile__column {
@@ -60,7 +60,6 @@ max-width: 97px;
     height: 80px;
     width: 80px;
     margin: 0 0 12px;
-
   }
 
   .profile__edit {
