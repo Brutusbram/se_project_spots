@@ -34,6 +34,8 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 445px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .card__like-button:hover {
@@ -51,5 +53,10 @@
   .card__title{
     max-width: 250px;
     font-size: 16px;
+  }
+
+  .card__like-button{
+    width: 20px;
+    height: 18px;
   }
 }
