@@ -15,6 +15,7 @@
 .profile__name {
   margin: 0 0 12px;
   font-weight: 500;
+  line-height: 1.2;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -33,6 +34,7 @@
   max-width: 420px;
   opacity: 0.7;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .profile__column {
@@ -41,6 +43,8 @@
 }
 
 .profile__edit {
+  display: flex;
+  gap: 8px;
   margin-top: auto;
   background-color: transparent;
   color: #212121;
@@ -52,7 +56,7 @@
 }
 
 .profile__edit:hover {
-  opacity: 1;
+  opacity: 0.8;
   transition: opacity 0.3s;
 }
 
