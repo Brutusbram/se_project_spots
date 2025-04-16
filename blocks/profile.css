@@ -56,7 +56,7 @@
 }
 
 .profile__edit:hover {
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 
@@ -64,14 +64,23 @@
   margin-left: auto;
   margin-top: auto;
   border: none;
-  background-color: transparent;
+  background-color: #212121;
   width: 149px;
   height: 52px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #FCF5e5;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .profile__add:hover {
-  opacity: 1;
+  opacity: 0.8;
   transition: opacity 0.3s;
 }
 
@@ -96,6 +105,8 @@
 
   .profile__add {
     margin: 0 0 20px;
+    width: 100%;
+
   }
 
   .profile__description {
