@@ -24,7 +24,9 @@
   background-color: transparent;
   cursor: pointer;
   opacity: 40%;
-  margin-left: 37px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__title{
@@ -45,9 +47,9 @@
 }
 
 @media screen and (max-width: 627px) {
-  .card__content {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .card__image {
+    height: 288px;
   }
 
   .card__title{
