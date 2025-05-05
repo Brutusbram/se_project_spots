@@ -29,7 +29,8 @@
               <img
                 src="./images/Pen_icon.svg"
                 alt="edit profile button"
-                class="profile__edit-icon" />
+                class="profile__edit-icon"
+              />
               <span class="profile__edit-text">Edit profile</span>
             </button>
           </div>
@@ -37,7 +38,8 @@
             <img
               src="./images/post_button.svg"
               alt="add post button"
-              class="profile__post-button"/>
+              class="profile__post-button"
+            />
             <span class="profile__post-text">Add post</span>
           </button>
         </section>
@@ -117,40 +119,69 @@
       <footer class="footer">
         <p class="footer__text">2025 &copy; Alex Bramwell</p>
       </footer>
-      <div class="modal modal_is-open">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__content">
           <button class="modal__close-button" type="button">
             <img src="./images/X_button.svg" alt="close modal button" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
-            <label for="modal__name-input" class="modal__label">Name
-              <input type="text" id="modal__name-input" class="modal__input" placeholder="Type your name" />
+            <label for="modal__name-input" class="modal__label"
+              >Name
+              <input
+                type="text"
+                id="modal__name-input"
+                class="modal__input"
+                placeholder="Type your name"
+              />
             </label>
-            <label for="modal__description-input" class="modal__label">Description
-              <input type="text" id="modal__description-input" class="modal__input" placeholder="Describe yourself" />
+            <label for="modal__description-input" class="modal__label"
+              >Description
+              <input
+                type="text"
+                id="modal__description-input"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
             </label>
-            <button class="modal__submit-button" type="button"><img src="./images/save_button.svg" alt="Save"></button>
+            <button class="modal__submit-button" type="button">
+              <img src="./images/save_button.svg" alt="Save" />
+            </button>
           </form>
         </div>
       </div>
-      <div class="modal modal_is-open">
+      <div class="modal" id="new-post-modal">
         <div class="modal__content">
           <button class="modal__close-button" type="button">
             <img src="./images/X_button.svg" alt="close modal button" />
           </button>
           <h2 class="modal__title">New post</h2>
           <form class="modal__form">
-            <label for="card-image-input" class="modal__label">Image link
-              <input type="url" id="card-image-input" class="modal__input" placeholder="Paste a link to the picture" />
+            <label for="card-image-input" class="modal__label"
+              >Image link
+              <input
+                type="url"
+                id="card-image-input"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
             </label>
-            <label for="card-caption-input" class="modal__label">Caption
-              <input type="text" id="card-caption-input" class="modal__input" placeholder="Type your caption" />
+            <label for="card-caption-input" class="modal__label"
+              >Caption
+              <input
+                type="text"
+                id="card-caption-input"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
             </label>
-            <button class="modal__submit-button" type="button"><img src="./images/save_button.svg" alt="Save"></button>
+            <button class="modal__submit-button" type="button">
+              <img src="./images/save_button.svg" alt="Save" />
+            </button>
           </form>
         </div>
       </div>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
