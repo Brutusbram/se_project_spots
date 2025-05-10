@@ -16,9 +16,7 @@ const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
   ".profile__description"
 );
-const editSubmitButton = editProfileModal.querySelector(
-  ".modal__submit-button"
-);
+
 const nameInput = newPostModal.querySelector(
   "#card-caption-input"
 );
@@ -54,7 +52,7 @@ function handleeditSubmitButton(evt) {
   evt.preventDefault();
   profileNameElement.textContent = editProfileNameInput.value;
   profileDescriptionElement.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
 
 
@@ -62,6 +60,6 @@ function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
   console.log(nameInput.value);
   console.log(linkInput.value);
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
