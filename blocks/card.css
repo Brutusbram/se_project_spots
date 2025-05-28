@@ -32,7 +32,7 @@
 
 .card__like-button_active {
   opacity: 1;
-  background-image: url(../images/State=Liked.svg);
+  background-image: url(../images/State=liked2.svg);
 }
 
 .card__delete-button {

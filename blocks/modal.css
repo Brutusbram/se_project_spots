@@ -113,6 +113,7 @@
   width: 100%;
   object-fit: contain;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .modal__image-container{
@@ -184,5 +185,8 @@
     height: 100%;
   }
 
+  .modal__caption {
+    font-size: 16px;
+  }
 
 }

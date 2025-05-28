@@ -75,7 +75,9 @@
           <form class="modal__form">
             <label for="modal__name-input" class="modal__label"
               >Name
-              <input
+              <input required
+                minlength="2"
+                maxlength="30"
                 type="text"
                 id="modal__name-input"
                 class="modal__input"
@@ -84,7 +86,7 @@
             </label>
             <label for="modal__description-input" class="modal__label"
               >Description
-              <input
+              <input required
                 type="text"
                 id="modal__description-input"
                 class="modal__input"
@@ -106,7 +108,7 @@
           <form class="modal__form">
             <label for="card-image-input" class="modal__label"
               >Image link
-              <input
+              <input required
                 type="url"
                 id="card-image-input"
                 class="modal__input"
@@ -115,7 +117,7 @@
             </label>
             <label for="card-caption-input" class="modal__label"
               >Caption
-              <input
+              <input required
                 type="text"
                 id="card-caption-input"
                 class="modal__input"
@@ -133,7 +135,7 @@
           <button class="modal__close-button-preview" type="button">
             <img src="./images/X-button-white.svg" alt="close modal button" />
           </button>
-          <img src=" " alt=" " class="modal__image">
+          <img src="#" alt=" " class="modal__image">
           <p class="modal__caption">#</p>
         </div>
       </div>
