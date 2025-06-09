@@ -77,21 +77,26 @@
               >Name
               <input required
                 minlength="2"
-                maxlength="30"
+                maxlength="40"
                 type="text"
                 id="modal__name-input"
                 class="modal__input"
                 placeholder="Type your name"
               />
+              <span id="modal__name-input-error" class="modal__input-error"></span>
             </label>
             <label for="modal__description-input" class="modal__label"
               >Description
               <input required
+              minlength="2"
+              maxlength="200"
                 type="text"
                 id="modal__description-input"
                 class="modal__input"
                 placeholder="Describe yourself"
               />
+               <span id="modal__description-input-error" class="modal__input-error"></span>
+
             </label>
             <button class="modal__submit-button" type="submit">
               Save
@@ -114,15 +119,19 @@
                 class="modal__input"
                 placeholder="Paste a link to the picture"
               />
+              <span id="card-image-input-error" class="modal__input-error"></span>
             </label>
             <label for="card-caption-input" class="modal__label"
               >Caption
               <input required
+              minlength="2"
+              maxlength="30"
                 type="text"
                 id="card-caption-input"
                 class="modal__input"
                 placeholder="Type your caption"
               />
+              <span id="card-caption-input-error" class="modal__input-error"></span>
             </label>
             <button class="modal__submit-button" type="submit">
               Save
@@ -141,5 +150,6 @@
       </div>
     </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>

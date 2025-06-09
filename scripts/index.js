@@ -153,4 +153,4 @@ initialCards.forEach(function(item)  {
 
 
 
-console.log("all clear");
+console.log("Index script good to go");

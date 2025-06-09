@@ -72,6 +72,18 @@
   border: 1px solid rgba(33, 33, 33, 0.4);
 }
 
+.modal__input-error {
+  display: block;
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(255, 0, 0, 0.7)
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__input:hover {
   cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 1);
@@ -103,6 +115,11 @@
 .modal__submit-button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.modal__submit-button:disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 
 .modal__image{
@@ -180,7 +197,7 @@
 
   .modal__image-container {
     max-width: 288px;
-  
+
   }
 
   .modal__image {
