@@ -59,6 +59,7 @@ const imagePreviewCaption = imagePreviewModal.querySelector(
 );
 
 const deleteButton = document.querySelector(".card__delete-button");
+const cardSubmitButton = newPostModal.querySelector(".modal__submit-button");
 
 const cardTemplate = document.querySelector("#card__template");
 const cardList = document.querySelector(".cards__list");
@@ -95,18 +96,43 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function keyDownHandler(event) {
+  if (event.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }};
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-}
+ setTimeout(()=>{
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("click", clickOutsideHandler);
+}, 0)};
+
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-}
+   setTimeout(()=>{
+document.removeEventListener("keydown", keyDownHandler);
+document.removeEventListener("click", clickOutsideHandler);
+}, 0)};
+
+
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editProfileDescriptionInput.value = profileDescriptionElement.textContent;
   openModal(editProfileModal);
+
 });
+
+function clickOutsideHandler(event) {
+  const openedModal = document.querySelector(".modal_is-opened");
+  const modalContent = openedModal.querySelector(".modal__content");
+  if (openedModal && !modalContent.contains(event.target)) {
+    closeModal(openedModal);
+  }
+};
 
 closeEditProfileButton.addEventListener("click", function () {
   closeModal(editProfileModal);
@@ -137,20 +163,20 @@ function handleAddCardFormSubmit(evt) {
   const cardData = {
     name: nameInput.value,
     link: linkInput.value,
-  };
-
+  }
+  disableButton(cardSubmitButton);
   const cardElement = getCardElement(cardData);
   cardList.prepend(cardElement);
   closeModal(newPostModal);
   addCardFormElement.reset();
 }
+
 addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
 
 initialCards.forEach(function(item)  {
  const cardElement = getCardElement(item);
  cardList.append(cardElement);
 });
-
 
 
 console.log("Index script good to go");
