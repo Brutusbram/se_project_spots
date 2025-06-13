@@ -57,19 +57,14 @@ const toggleButtonState = (inputList, buttonElement, config) => {
   }
 }
 
-disableButton = (inputList, buttonElement) =>{
-  if (hasInvalidInput(inputList)) {
-    buttonElement.disabled = true;
-    buttonElement.classList.add(config.inactiveButtonClass);
-  } else {
-    buttonElement.disabled = false;
-    buttonElement.classList.remove(config.inactiveButtonClass);
-  }
+const disableButton = (buttonElement, config) =>{
+  buttonElement.disabled = true;
+  buttonElement.classList.add(config.inactiveButtonClass);
 };
 
-const resetValidation = (formElement) =>{
+const resetValidation = (formElement, config) =>{
 
-  const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
+  const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
   inputList.forEach((inputElement) => {
     hideInputError(formElement, inputElement, config);
   })};

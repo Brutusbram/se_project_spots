@@ -10,6 +10,12 @@
   border-radius: 2%;
 }
 
+.card__image:hpver{
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
 .card__content {
   display: flex;
   margin-top: 12px;
