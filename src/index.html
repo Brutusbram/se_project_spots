@@ -6,8 +6,7 @@
     <meta name="author" content="Alex Bramwell" />
     <meta name="description" content="Spots Project." />
     <meta name="keywords" content="HTML, CSS" />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" href="./Vendor/favicon.ico" />
+    <link rel="icon" href="../src/Vendor/favicon.ico" />
     <title>Spots</title>
   </head>
   <body>
@@ -36,7 +35,7 @@
           </div>
           <button type="button" class="profile__add">
             <img
-              src="./images/post_button.svg"
+              src="./images/Post_button.svg"
               alt="add post button"
               class="profile__post-button"
             />
@@ -47,19 +46,14 @@
           <ul class="cards__list">
             <template id="card__template">
               <li class="card">
-                <img
-                  src=""
-                  alt=" "
-                  class="card__image"
-                />
+                <img src="" alt=" " class="card__image" />
                 <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button type="button" class="card__like-button"></button>
-                <button type="button" class="card__delete-button"></button>
-              </div>
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                  <button type="button" class="card__delete-button"></button>
+                </div>
               </li>
             </template>
-
           </ul>
         </section>
       </main>
@@ -75,7 +69,8 @@
           <form class="modal__form">
             <label for="modal__name-input" class="modal__label"
               >Name
-              <input required
+              <input
+                required
                 minlength="2"
                 maxlength="40"
                 type="text"
@@ -83,24 +78,28 @@
                 class="modal__input"
                 placeholder="Type your name"
               />
-              <span id="modal__name-input-error" class="modal__input-error"></span>
+              <span
+                id="modal__name-input-error"
+                class="modal__input-error"
+              ></span>
             </label>
             <label for="modal__description-input" class="modal__label"
               >Description
-              <input required
-              minlength="2"
-              maxlength="200"
+              <input
+                required
+                minlength="2"
+                maxlength="200"
                 type="text"
                 id="modal__description-input"
                 class="modal__input"
                 placeholder="Describe yourself"
               />
-               <span id="modal__description-input-error" class="modal__input-error"></span>
-
+              <span
+                id="modal__description-input-error"
+                class="modal__input-error"
+              ></span>
             </label>
-            <button class="modal__submit-button" type="submit">
-              Save
-            </button>
+            <button class="modal__submit-button" type="submit">Save</button>
           </form>
         </div>
       </div>
@@ -113,29 +112,35 @@
           <form class="modal__form">
             <label for="card-image-input" class="modal__label"
               >Image link
-              <input required
+              <input
+                required
                 type="url"
                 id="card-image-input"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
               />
-              <span id="card-image-input-error" class="modal__input-error"></span>
+              <span
+                id="card-image-input-error"
+                class="modal__input-error"
+              ></span>
             </label>
             <label for="card-caption-input" class="modal__label"
               >Caption
-              <input required
-              minlength="2"
-              maxlength="30"
+              <input
+                required
+                minlength="2"
+                maxlength="30"
                 type="text"
                 id="card-caption-input"
                 class="modal__input"
                 placeholder="Type your caption"
               />
-              <span id="card-caption-input-error" class="modal__input-error"></span>
+              <span
+                id="card-caption-input-error"
+                class="modal__input-error"
+              ></span>
             </label>
-            <button class="modal__submit-button" type="submit">
-              Save
-            </button>
+            <button class="modal__submit-button" type="submit">Save</button>
           </form>
         </div>
       </div>
@@ -144,12 +149,10 @@
           <button class="modal__close-button-preview" type="button">
             <img src="./images/X-button-white.svg" alt="close modal button" />
           </button>
-          <img src="#" alt=" " class="modal__image">
+          <img src="#" alt=" " class="modal__image" />
           <p class="modal__caption">#</p>
         </div>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validation.js"></script>
   </body>
 </html>

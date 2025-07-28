@@ -1,10 +1,10 @@
-const config = {
+export const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-button",
-  inactiveButtonClass: ".modal__submit-button_disabled",
-  inputErrorClass: ".modal__input-error",
-  errorClass: ".modal__input_type_error",
+  inactiveButtonClass: "modal__submit-button_disabled",
+  inputErrorClass: "modal__input-error",
+  errorClass: "modal__input_type_error",
 };
 
 function showInputError(formElement, inputElement, errorMessage, config) {
@@ -65,12 +65,12 @@ const toggleButtonState = (inputList, buttonElement, config) => {
   }
 };
 
-const disableButton = (buttonElement, config) => {
+export const disableButton = (buttonElement, config) => {
   buttonElement.disabled = true;
   buttonElement.classList.add(config.inactiveButtonClass);
 };
 
-const resetValidation = (formElement, config) => {
+export const resetValidation = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector)
   );
@@ -79,12 +79,11 @@ const resetValidation = (formElement, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
 };
-enableValidation(config);
 
 console.log("Validation script loaded");
