@@ -5,7 +5,7 @@ import {
   disableButton,
 } from "./validation.js";
 import "../pages/index.css";
-import Api from "./Utils/Api.js";
+import Api from "./utils/Api.js";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
