@@ -78,7 +78,7 @@
   margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
-  color: rgba(255, 0, 0, 0.7)
+  color: rgba(255, 0, 0, 0.7);
 }
 
 .modal__input_type_error {
@@ -123,7 +123,7 @@
   opacity: 0.5;
 }
 
-.modal__image{
+.modal__image {
   display: block;
   position: relative;
   max-width: 80vw;
@@ -134,9 +134,76 @@
   cursor: pointer;
 }
 
-.modal__image-container{
+.modal__image-container {
   position: relative;
   border-radius: 8px;
+}
+
+.modal__delete-image {
+  visibility: hidden;
+  display: flex;
+  height: 630px;
+  width: 172px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__cancel_delete-button {
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.modal__cancel_delete-button:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 33, 33, 1);
+}
+
+.modal__delete_title {
+  /* height: 24px;
+  width: 590px; */
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+}
+
+.modal__delete-form {
+  height: 52px;
+  width: 332px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 8px;
+  display: flex;
+}
+
+.modal__delete-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__save_delete-button {
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  border: 0;
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(255, 101, 101, 1);
+}
+
+.modal__save_delete-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 51, 51, 1);
 }
 
 .modal__caption {
@@ -160,12 +227,10 @@
 .modal__close-button-preview:hover {
   cursor: pointer;
   opacity: 0.4;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
-
-  .modal__close-button-preview{
+  .modal__close-button-preview {
     top: -48px;
     right: 0;
   }
@@ -177,7 +242,7 @@
   .modal__close-button {
     position: absolute;
     top: 20px;
-    right: 12px
+    right: 12px;
   }
 
   .modal__content {
@@ -198,7 +263,6 @@
 
   .modal__image-container {
     max-width: 288px;
-
   }
 
   .modal__image {
@@ -209,4 +273,21 @@
     font-size: 16px;
   }
 
+  .modal__delete-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__delete_title{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .modal__delete-form {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+  }
 }

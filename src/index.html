@@ -12,33 +12,31 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
+        <img class="header__logo"
+        src="<%=require('./images/logo.svg')%>" alt="Around the U.S. Logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/avatar.jpg"
-            alt="Bessie Pic"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+          <button type="button" class="profile__avatar-edit-btn">
+            <img class="profile__avatar-edit-icon"
+            src="<%=require('./images/edit_avatar-pencil.svg')%>" alt="Edit Avatar" />
+          </button>
+          <img class="profile__avatar"
+          src="<%=require('./images/avatar.jpg')%>" alt="Profile Avatar" />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit">
-              <img
-                src="./images/Pen_icon.svg"
-                alt="edit profile button"
-                class="profile__edit-icon"
-              />
+              <img class="profile__edit-icon"
+              src="<%=require('./images/pen_icon.svg')%>" alt="Edit Profile"" />
               <span class="profile__edit-text">Edit profile</span>
             </button>
           </div>
           <button type="button" class="profile__add">
-            <img
-              src="./images/Post_button.svg"
-              alt="add post button"
-              class="profile__post-button"
-            />
+            <img class="profile__post-button"
+            src="<%=require('./images/post_button.svg')%>" alt="Add Post" />
             <span class="profile__post-text">Add post</span>
           </button>
         </section>
@@ -63,7 +61,8 @@
       <div class="modal" id="edit-profile-modal">
         <div class="modal__content">
           <button class="modal__close-button" type="button">
-            <img src="./images/X_button.svg" alt="close modal button" />
+            <img class="modal__close-button-image"
+            src="<%=require('./images/X_button.svg')%>" alt="Close Modal"" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
@@ -99,14 +98,16 @@
                 class="modal__input-error"
               ></span>
             </label>
-            <button class="modal__submit-button" type="submit">Save</button>
+            <button class="modal__submit-button"
+            src="<%=require('./images/post_button.svg')%>" alt="Add Post"" type="submit">Save</button>
           </form>
         </div>
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__content">
           <button class="modal__close-button" type="button">
-            <img src="./images/X_button.svg" alt="close modal button" />
+            <img class="modal__close-button-image2"
+            src="<%=require('./images/X_button.svg')%>" alt="Close Modal" />
           </button>
           <h2 class="modal__title">New post</h2>
           <form class="modal__form">
@@ -140,17 +141,61 @@
                 class="modal__input-error"
               ></span>
             </label>
-            <button class="modal__submit-button" type="submit">Save</button>
+            <button class="modal__submit-button" type="submit"
+             src="<%=require('./images/post_button.svg')%>" alt="Add Post">Save</button>
           </form>
         </div>
       </div>
       <div class="modal" id="preview-image-modal">
         <div class="modal__image-container">
           <button class="modal__close-button-preview" type="button">
-            <img src="./images/X-button-white.svg" alt="close modal button" />
+            <img class="modal__close-button-previewLogo"
+            src="<%=require('./images/X-button-white.svg')%>" alt="Close Modal" />
           </button>
           <img src="#" alt=" " class="modal__image" />
           <p class="modal__caption">#</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="edit-avatar-modal">
+        <div class="modal__content">
+          <button class="modal__close-button" type="button" id="close-edit-avatar-button">
+            <img class="modal__close-button-image2"
+            src="<%=require('./images/X_button.svg')%>" alt="Close Modal" />
+          </button>
+          <h3 class="modal__title">Edit Avatar</h3>
+          <form class="modal__form" id="edit-avatar-form">
+            <label for="avatar-image-input" class="modal__label">
+              Avatar
+              <input
+                required
+                type="url"
+                id="avatar-image-input"
+                class="modal__input"
+                placeholder="Avatar URL Goes Here"
+              />
+              <span
+                id="avatar-image-input-error"
+                class="modal__input-error"
+              ></span>
+            </label>
+             <button class="modal__submit-button" id="submitAvatar" type="submit"
+             src="<%=require('./images/post_button.svg')%>" alt="Add Post">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal__delete-image">
+        <div class="modal__content modal__delete-content">
+          <h3 class="modal__title modal__delete-title">Are you sure you want to delete this image?</h3>
+          <form class="modal__delete-form" id="modal__delete-form">
+             <button class="modal__save_delete-button" type="submit" id="modal__save_delete-button">
+              Delete
+             </button>
+             <button class="modal__cancel_delete-button" id="cancelDelete" type="button">
+              Cancel
+              </button>
+          </form>
         </div>
       </div>
     </div>
