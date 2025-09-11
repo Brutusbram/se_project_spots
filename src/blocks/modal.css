@@ -137,6 +137,7 @@
 .modal__image-container {
   position: relative;
   border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .modal__delete-image {
@@ -147,6 +148,9 @@
   position: absolute;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .modal__cancel_delete-button {
