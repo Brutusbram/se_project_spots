@@ -27,6 +27,7 @@
   align-items: flex-end;
   visibility: hidden;
   border: 0;
+  color: rgb(255, 253, 253)
 }
 
 .profile__avatar-edit-btn:hover {

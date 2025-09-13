@@ -52,6 +52,7 @@
   font-weight: 500;
   line-height: 100%;
   color: #212121;
+  font-family: 'Poppins', sans-serif;
 }
 
 .modal__form {
@@ -71,6 +72,7 @@
   font-weight: 500;
   box-sizing: border-box;
   border: 1px solid rgba(33, 33, 33, 0.4);
+  font-family: 'Poppins', sans-serif;
 }
 
 .modal__input-error {
@@ -78,6 +80,7 @@
   margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255, 0, 0, 0.7);
 }
 
@@ -161,6 +164,7 @@
   font-size: 16px;
   font-weight: 500;
   background-color: transparent;
+  font-family: 'poppins', sans-serif;
 }
 
 .modal__cancel_delete-button:hover {
@@ -203,6 +207,7 @@
   font-size: 16px;
   font-weight: 500;
   background-color: rgba(255, 101, 101, 1);
+  font-family: 'poppins', sans-serif;
 }
 
 .modal__save_delete-button:hover {

@@ -183,13 +183,13 @@ function handleAvatarEditSubmitButton(evt) {
     .editUserAvatar({ avatar: editAvatarUrlInput.value })
     .then((data) => {
       profileAvatar.src = data.avatar;
+       closeModal(editAvatarModal);
+      editProfileModal.reset();
     })
     .catch((error) => {
       console.error("Error updating user avatar:", error);
     })
     .finally(() => {
-      closeModal(editAvatarModal);
-      editProfileModal.reset();
       resetValidation(editAvatarModal, config);
     });
 }
@@ -204,13 +204,16 @@ function handleNewCardFormSubmit(evt) {
     .then((data) => {
       const cardElement = getCardElement(data);
       cardList.prepend(cardElement);
-      submitButton.textContent = "Save";
       resetValidation(newPostModal, config);
       closeModal(newPostModal);
       addCardFormElement.reset();
     })
     .catch((error) => {
       console.error("Error adding new image:", error);
+    })
+    .finally(() => {
+      submitButton.textContent = "Save";
+      submitButton.disabled = true;
     });
 }
 
@@ -228,7 +231,6 @@ function handleDeleteSubmit(evt) {
     .catch((error) => {
       console.error("Error deleting card:", error);
     })
-
     .finally(() => {
       submitButton.textContent = "Yes, delete";
     });
@@ -287,7 +289,6 @@ function handleEditSubmitButton(evt) {
     .catch((error) => {
       console.error("Error updating user info:", error);
     })
-
     .finally(() => {
       submitButton.textContent = "Save";
 
