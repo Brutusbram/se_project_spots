@@ -52,7 +52,7 @@ const editAvatarModal = document.querySelector("#edit-avatar-modal");
 const closeEditAvatarButton = editAvatarModal.querySelector(
   "#close-edit-avatar-button"
 );
-const editAvatarForm = editAvatarModal.querySelector(".edit-avatar-form");
+const editAvatarForm = editAvatarModal.querySelector(".modal__form");
 const newAvatarSubmitButton = editAvatarModal.querySelector("#submitAvatar");
 const editAvatarUrlInput = editAvatarModal.querySelector("#avatar-image-input");
 
@@ -175,20 +175,21 @@ function clickOutsideHandler(event) {
 function handleAvatarEditSubmitButton(evt) {
   console.log("Edit avatar form submitted");
   evt.preventDefault();
+  newAvatarSubmitButton.textContent = "Saving..."
   api
     .editUserAvatar({ avatar: editAvatarUrlInput.value })
     .then((data) => {
       profileAvatar.src = data.avatar;
-      newAvatarSubmitButton.textContent = "Saving..."
        closeModal(editAvatarModal);
       editAvatarForm.reset();
+      newAvatarSubmitButton.disabled = true;
     })
     .catch((error) => {
       console.error("Error updating user avatar:", error);
     })
     .finally(() => {
       newAvatarSubmitButton.textContent = "Save";
-      newAvatarSubmitButton.disabled = true;
+
     });
 }
 
@@ -263,7 +264,7 @@ previewImageCloseButton.addEventListener("click", function () {
   closeModal(imagePreviewModal);
 });
 
-newAvatarSubmitButton.addEventListener("submit", handleAvatarEditSubmitButton);
+editAvatarForm.addEventListener("submit", handleAvatarEditSubmitButton);
 
 function handleEditSubmitButton(evt) {
   evt.preventDefault();
