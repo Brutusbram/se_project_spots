@@ -48,15 +48,15 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
-            generator: {
-              filename: 'images/[hash][ext][query]'
-            }
+        generator: {
+          filename: "images/[hash][ext][query]",
+        },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./index.html",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
